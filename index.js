@@ -8,7 +8,8 @@ function createApp(){
         backgroundColor: 0x999999,
         antialias: true,
         hello: false,
-        autoResize: true,        
+        autoResize: window,
+        resolution: window.devicePixelRatio || 1
     })
     
     document.getElementById('app').append(_app.view);
