@@ -68,6 +68,21 @@
     
     <script src="https://pixijs.download/v7.3.2/pixi.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pixi-spine@4.0.4/dist/pixi-spine.min.js"></script>
+
+    <script> javascript: (function () {
+            var script = document.createElement('script'); script.onload = function () {
+                var stats = new Stats(); 
+                document.body.appendChild(stats.dom); 
+                // requestAnimationFrame(function loop() { 
+                //     stats.update(); 
+                //     requestAnimationFrame(loop)
+                // });
+                PIXI.Ticker.shared.add(() => stats.update())
+            }; 
+            script.src = 'https://mrdoob.github.io/stats.js/build/stats.min.js'; 
+            document.head.appendChild(script);
+        })()
+    </script>
     <script type="module" src="./index.js"></script>
 
 </body>
